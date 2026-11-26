@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 85px 7%;
+  background: #f9f8f4;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.heading span {
+  color: #ed704e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.heading h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  color: #222222;
+  margin: 15px 0;
+  letter-spacing: -2px;
+}
+
+.heading h1 i {
+  color: #ed704e;
+  font-family: Georgia, serif;
+}
+
+.heading p {
+  color: #858585;
+  font-size: 15px;
+}
+
+/* THREE BOXES */
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* INDIVIDUAL BOX */
+
+.box {
+  padding: 18px;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 22px 40px rgba(0,0,0,0.10);
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px 17px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #333;
+}
+
+.box-top span:last-child {
+  font-size: 22px;
+}
+
+.box img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.box:hover img {
+  transform: scale(1.025);
+}
+
+.box-content {
+  padding: 23px 7px 10px;
+}
+
+.category {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #666;
+}
+
+.box-content h2 {
+  font-size: 28px;
+  color: #242424;
+  margin: 12px 0;
+  letter-spacing: -0.7px;
+}
+
+.box-content p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+  min-height: 75px;
+}
+
+.box-content button {
+  border: none;
+  padding: 14px 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 7px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.box-content button:hover {
+  transform: translateX(5px);
+  filter: brightness(0.9);
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .page {
+    padding: 55px 6%;
+  }
+
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h1 {
+    font-size: 39px;
+  }
+}
